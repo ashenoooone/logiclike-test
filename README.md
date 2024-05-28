@@ -1,30 +1,63 @@
-# React + TypeScript + Vite
+# LogicLike Test Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Технологии
 
-Currently, two official plugins are available:
+Проект выполнен с использованием архитектуры Feature-Sliced Design (FSD) для обеспечения масштабируемости и модульности кода.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Основные технологии, использованные в проекте:
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- SCSS
+- axios
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Функциональность
 
-- Configure the top-level `parserOptions` property like this:
+Страница имеет следующие функции:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. **Динамическое получение списка курсов**:
+   - Список курсов формируется динамически на основе данных, полученных от API по эндпоинту `GET https://logiclike.com/docs/courses.json`.
+2. **Фильтрация курсов по темам (тегам)**:
+   - Пользователь может выбрать тему из списка, и курсы будут отфильтрованы по выбранной теме.
+3. **Адаптивный дизайн**:
+   - Страница корректно отображается на разных разрешениях экрана, с фиксированной шириной блока тегов и адаптивным блоком курсов.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Установка и запуск
+
+Для локального запуска проекта выполните следующие шаги:
+
+1. Клонируйте репозиторий:
+
+   ```bash
+   git clone https://github.com/ashenoooone/logiclike-test
+   ```
+
+2. Перейдите в директорию проекта:
+
+   ```bash
+   cd logiclike-test
+   ```
+
+3. Установите зависимости:
+
+   ```bash
+   npm install
+   ```
+
+4. Запустите проект:
+
+   ```bash
+   npm start
+   ```
+
+Проект будет доступен по адресу `http://localhost:5173`.
+
+## Структура проекта
+
+Проект организован согласно принципам FSD (Feature-Sliced Design). Основные директории включают:
+
+- **src**:
+  - **pages**: компоненты страниц.
+  - **widgets**: крупные, автономные компоненты.
+  - **entities**: бизнес-сущности.
+  - **shared**: общие компоненты и утилиты.

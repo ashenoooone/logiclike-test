@@ -1,0 +1,23 @@
+.course_list_item {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.image_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-width: 144px;
+  max-height: 144px;
+}
+
+.name {
+  font-weight: 800;
+  padding: 12px 18px;
+}

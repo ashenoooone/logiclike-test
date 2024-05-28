@@ -1,0 +1,21 @@
+.theme_bar_item {
+  font-weight: 800;
+  color: var(--black);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: var(--border-radius-sm);
+  width: 100%;
+  text-align: left;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.selected {
+    background: var(--green);
+    color: var(--white);
+  }
+}
